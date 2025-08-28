@@ -1,0 +1,5 @@
+⚡ After this, every time you update the website locally you just run:
+
+git add .
+git commit -m "Update site"
+git push
