@@ -1,140 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PharmaPrecision Hub</title>
-  <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- React & ReactDOM CDN -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <!-- Framer Motion -->
-  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
-  <!-- Babel for JSX -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800 scroll-smooth">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <div id="root"></div>
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-6">
+      <h1 class="text-2xl font-bold">PharmaPrecision Hub</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#services" class="hover:text-blue-300">Services</a>
+        <a href="#expertise" class="hover:text-blue-300">Expertise</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <script type="text/babel">
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white text-center py-32">
+    <h2 class="text-4xl md:text-6xl font-bold mb-6">Expertise in Toxicokinetics & PBPK Modelling</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Supporting preclinical and regulatory projects with advanced pharmacokinetic analysis, modelling, and risk assessment.</p>
+    <div class="flex justify-center gap-4">
+      <a href="#contact" class="bg-white text-blue-800 font-semibold px-6 py-3 rounded-2xl shadow hover:bg-gray-100">Request a Quote</a>
+      <a href="#services" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:bg-blue-600">Learn More</a>
+    </div>
+  </section>
 
-    const { useState } = React;
-    const { motion } = window['framer-motion'];
+  <!-- Services -->
+  <section id="services" class="max-w-6xl mx-auto py-20 px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Services</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300">
+        <div class="text-4xl mb-4">📊</div>
+        <h4 class="text-xl font-semibold mb-2">Non-compartmental Analysis (NCA)</h4>
+        <p class="text-gray-700 leading-relaxed">Cmax, Tmax, AUC, t½, clearance and distribution parameters.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300">
+        <div class="text-4xl mb-4">🧬</div>
+        <h4 class="text-xl font-semibold mb-2">PBPK Modelling</h4>
+        <p class="text-gray-700 leading-relaxed">Physiologically-based kinetic modelling for QIVIVE, mixtures and regulatory.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition-transform duration-300">
+        <div class="text-4xl mb-4">🎓</div>
+        <h4 class="text-xl font-semibold mb-2">Training & Support</h4>
+        <p class="text-gray-700 leading-relaxed">Workshops, regulatory guidance and hands-on training.</p>
+      </div>
+    </div>
+  </section>
 
-    function Home() {
-      const [form, setForm] = useState({ name: "", email: "", message: "" });
+  <!-- Expertise -->
+  <section id="expertise" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-8">Expertise</h3>
+      <p class="text-lg leading-relaxed">
+        Our experts are pharmacokineticists and computational toxicologists with expertise in ADME, PBPK modelling, NAMs, and integrated risk assessment.
+        Extensive experience in academic and industrial collaborations, focusing on new biological or chemical entities for Human or Animal Health.
+      </p>
+    </div>
+  </section>
 
-      const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Message sent! (This demo form does not send emails)");
-      };
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto py-20 px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Contact</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <form class="space-y-4">
+        <input type="text" placeholder="Your name" class="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <input type="email" placeholder="Your email" class="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <textarea placeholder="Your message" rows="5" class="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+        <button type="submit" class="bg-blue-800 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 font-semibold w-full">Send Message</button>
+      </form>
+      <div class="space-y-4 flex flex-col justify-center text-gray-700">
+        <p>📧 contact@pharmaprecision-hub.fr</p>
+        <p>📞 +33 6 29 72 95 80</p>
+        <p>📍 15 rue de l’Echaudee, 27930 Le Vieil Evreux, France</p>
+      </div>
+    </div>
+  </section>
 
-      const services = [
-        { icon: "📊", title: "Non-compartmental Analysis (NCA)", desc: "Cmax, Tmax, AUC, t½, clearance and distribution parameters." },
-        { icon: "🧬", title: "PBPK Modelling", desc: "Physiologically-based kinetic modelling for QIVIVE, mixtures and regulatory." },
-        { icon: "🎓", title: "Training & Support", desc: "Workshops, regulatory guidance and hands-on training." }
-      ];
-
-      return (
-        <div>
-          {/* Header */}
-          <header className="bg-blue-900 text-white p-6 sticky top-0 z-50 shadow-md">
-            <div className="max-w-6xl mx-auto flex justify-between items-center">
-              <h1 className="text-2xl font-bold">PharmaPrecision Hub</h1>
-              <nav className="space-x-6 hidden md:block">
-                <a href="#services" className="hover:text-blue-300">Services</a>
-                <a href="#expertise" className="hover:text-blue-300">Expertise</a>
-                <a href="#contact" className="hover:text-blue-300">Contact</a>
-              </nav>
-            </div>
-          </header>
-
-          {/* Hero */}
-          <section className="bg-gradient-to-r from-blue-800 to-blue-600 text-white text-center py-28">
-            <motion.h2 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-4xl md:text-6xl font-bold">
-              Expertise in Toxicokinetics & PBPK Modelling
-            </motion.h2>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 1 }} className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-              Supporting preclinical and regulatory projects with advanced pharmacokinetic analysis, modelling, and risk assessment.
-            </motion.p>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
-              <a href="#contact" className="mt-8 inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-2xl shadow hover:bg-gray-100 mx-2">
-                Request a Quote
-              </a>
-              <a href="#services" className="mt-8 inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:bg-blue-600 mx-2">
-                Learn More
-              </a>
-            </motion.div>
-          </section>
-
-          {/* Services */}
-          <section id="services" className="max-w-6xl mx-auto py-16 px-6">
-            <h3 className="text-3xl font-bold text-center mb-12">Services</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((s, idx) => (
-                <motion.div key={idx} className="bg-white rounded-3xl shadow-lg p-8 text-center hover:scale-105 transition-all duration-300" whileHover={{ scale: 1.05 }}>
-                  <div className="text-4xl mb-4">{s.icon}</div>
-                  <h4 className="text-xl font-semibold mb-2">{s.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{s.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-
-          {/* Expertise */}
-          <section id="expertise" className="bg-gray-50 py-16 px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl font-bold mb-8">Expertise</h3>
-              <p className="text-lg leading-relaxed">
-                Our experts are pharmacokineticists and computational toxicologists with expertise in ADME, PBPK modelling, NAMs, and integrated risk assessment.  
-                Extensive experience in academic and industrial collaborations, focusing on new biological or chemical entities for Human or Animal Health.
-              </p>
-            </div>
-          </section>
-
-          {/* Contact */}
-          <section id="contact" className="max-w-4xl mx-auto py-16 px-6">
-            <h3 className="text-3xl font-bold text-center mb-8">Contact</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <label className="block">
-                  <span className="text-gray-700 font-medium">Name</span>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your name" className="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-                </label>
-                <label className="block">
-                  <span className="text-gray-700 font-medium">Email</span>
-                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Your email" className="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-                </label>
-                <label className="block">
-                  <span className="text-gray-700 font-medium">Message</span>
-                  <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your message" rows="5" className="w-full border rounded-3xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-                </label>
-                <button type="submit" className="bg-blue-800 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 font-semibold">
-                  Send Message
-                </button>
-              </form>
-
-              <div className="space-y-4 text-gray-700 flex flex-col justify-center">
-                <p>📧 contact@pharmaprecision-hub.fr</p>
-                <p>📞 +33 6 29 72 95 80</p>
-                <p>📍 15 rue de l’Echaudee, 27930 Le Vieil Evreux, France</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Footer */}
-          <footer className="bg-blue-900 text-white text-center py-6">
-            <p>© {new Date().getFullYear()} PharmaPrecision-Hub — All rights reserved</p>
-          </footer>
-        </div>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById("root")).render(<Home />);
-  </script>
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center py-6">
+    <p>© 2025 PharmaPrecision-Hub — All rights reserved</p>
+  </footer>
 
 </body>
 </html>
