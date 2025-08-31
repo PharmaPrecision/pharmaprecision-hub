@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pharmaprecision-hub.fr/</loc>
-    <lastmod>2025-08-30</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-08-31</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pharmaprecision-hub.fr/#services</loc>
+    <lastmod>2025-08-31</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pharmaprecision-hub.fr/#methods</loc>
+    <lastmod>2025-08-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharmaprecision-hub.fr/#use-cases</loc>
+    <lastmod>2025-08-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pharmaprecision-hub.fr/#faq</loc>
+    <lastmod>2025-08-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pharmaprecision-hub.fr/#contact</loc>
+    <lastmod>2025-08-31</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
